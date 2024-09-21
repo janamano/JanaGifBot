@@ -86,8 +86,9 @@ def update_file():
     with open('count.txt', 'w') as file:
         file.writelines(lines)
 
-
-bot.run('MTI4NDIyNzQwNDk3NzY3MjIxMg.GYmGk4.5Kg2crJHedILaAupPsn6f3YHm4z3Tw0vONaO20')
+with open('cred.txt', 'r') as file:
+        lines = file.readlines()
+bot.run(lines[0].strip())
 
 
 # @bot.event
